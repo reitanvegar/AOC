@@ -1,0 +1,10 @@
+#!/bin/bash
+
+count=0
+while read line; do
+    nums=$(echo $line | grep -oP "[0-9]")
+    count=$(($count + $((${nums::1}${nums: -1}))))
+done
+
+echo $count
+
