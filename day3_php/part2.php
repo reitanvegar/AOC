@@ -18,13 +18,13 @@ function find_adjacent_digits(array $lines, int $line_nr, int $pos, int $len=1) 
 
     $line = $lines[$line_nr];
 
-    /* If start of line */
+    /* If not start of line */
     if ($pos != 0){
         $pos -= 1;
         $len += 1;
     }
     
-    /* If end of line */
+    /* If not end of line */
     if($pos + $len < strlen($line)){
         $len += 1;
     }
